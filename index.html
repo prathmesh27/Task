@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Task</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+<div class="app" mv-app="appName" mv-storage="local">
+	<div class="board container" property="board" mv-multiple>	
+		<div class="board-container row">
+			<ul class="column col-md-4">
+				<li class="title">Todo ([count(todo)])</li>
+				<li class="card" property="todo" mv-multiple mv-accepts="todo in_progress completed">Todo 1</li>
+			</ul>
+			<ul class="column col-md-4">
+				<li class="title">In Progress ([count(in_progress)])</li>
+				<li class="card" property="in_progress" mv-multiple mv-accepts="todo in_progress completed">
+					<p property="title">In progress 1</p>
+					<ul class="tasks-list">
+						<li class="task" mv-multiple="task" mv-initial-items="0">
+							<input type="checkbox" property="done"/>
+							<span property="task_name"></span>
+						</li>
+					</ul>
+				</li>
+			</ul>
+			<ul class="column col-md-4">
+				<li class="title">Completed ([count(completed)])</li>
+				<li class="card" property="completed" mv-multiple  mv-accepts="todo in_progress completed">Completed 1</li>
+			</ul>
+		</div>
+	</div>
+</div>
+<script type="" src="js/jquery-3.3.1.slim.min.js"></script>
+<script type="" src="js/popper.min.js"></script>
+<script type="" src="js/bootstrap.min.js"></script>
+<script type="" src="js/main.js"></script>
+<!--  -->
+</body>
+</html>
